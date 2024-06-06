@@ -3,6 +3,9 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 #projeto {
@@ -29,7 +32,7 @@ body {
 
 #frase {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:30px;
+    font-size: 30px;
     color: lightgray;
     margin-top: 10px;
 }
@@ -46,7 +49,6 @@ h2 {
     width: 70%;
 }
 
-
 .botao {
     display: flex;
     justify-content: space-between;
@@ -61,10 +63,13 @@ input {
     border: 1px solid black;
     width: 50%;
     box-sizing: border-box;
+    text-align: center;
 }
-#reiniciar{
+
+#reiniciar {
     background-color: gray;
 }
+
 button {
     margin: 5px 0;
     padding: 2%;
@@ -96,26 +101,39 @@ img {
 }
 
 @media screen and (max-width: 1100px) {
-    .projeto {
+    #projeto {
+        flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
     .container1 {
-        width: 70%;
+        width: 100%;
         align-items: center;
     }
 
-    input,
-    button {
+    .botao {
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        font-size: 15px;
+    }
+
+    input {
+        width: 90%;
+        font-size: 18px;
     }
 
     img {
-        display: none;
+        width: 80%;
+        max-width: 200px;
+        display: block;
     }
+    button{
+        width: 40%;
+    }
+
     #frase {
-     display: none;
+        font-size: 18px;
+        display: block;
     }
 }
